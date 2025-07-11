@@ -1,103 +1,376 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { ChevronLeft, ChevronRight, Award, Users, BookOpen, Trophy, Star, ArrowRight, Badge } from "lucide-react"
+import { heroImages } from "@/const"
+
+export default function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length)
+  }
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="pt-16">
+      {/* Hero Section with Image Slider */}
+      <section className="relative h-[70vh] overflow-hidden">
+        <div className="absolute inset-0">
+          {heroImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image src={image || "/placeholder.svg"} alt={`School life ${index + 1}`} fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/40" />
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+
+        <div className="relative z-10 h-full flex items-center justify-center text-center text-white">
+          <div className="max-w-4xl mx-auto px-4 animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold font-serif mb-6">
+              Welcome to <span className="gradient-text">SchoolName</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">Where Excellence Meets Innovation in Education</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
+                <Link href="/admissions">Apply Now</Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-white border-white hover:bg-white hover:text-gray-900 text-lg px-8 py-3 bg-transparent"
+              >
+                <Link href="/about">Learn More</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Slider Controls */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <ChevronLeft className="w-6 h-6 text-white" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <ChevronRight className="w-6 h-6 text-white" />
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? "bg-white" : "bg-white/50"
+              }`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Key Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose SchoolName?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide world-class education with a focus on holistic development, preparing students for success in
+              the 21st century.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <Award className="w-12 h-12 text-blue-600" />,
+                title: "Academic Excellence",
+                description:
+                  "Top-tier curriculum with experienced faculty ensuring the highest standards of education.",
+              },
+              {
+                icon: <Users className="w-12 h-12 text-green-600" />,
+                title: "Small Class Sizes",
+                description: "Personalized attention with optimal student-teacher ratios for better learning outcomes.",
+              },
+              {
+                icon: <BookOpen className="w-12 h-12 text-purple-600" />,
+                title: "Modern Facilities",
+                description: "State-of-the-art laboratories, library, and technology-enabled classrooms.",
+              },
+              {
+                icon: <Trophy className="w-12 h-12 text-orange-600" />,
+                title: "Sports & Activities",
+                description: "Comprehensive sports programs and extracurricular activities for all-round development.",
+              },
+            ].map((feature, index) => (
+              <Card
+                key={index}
+                className="text-center hover:shadow-lg transition-shadow duration-300 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6">
+                  <div className="flex justify-center mb-4 animate-float" style={{ animationDelay: `${index * 0.5}s` }}>
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-slide-up">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Core Values</h2>
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Excellence",
+                    description:
+                      "We strive for the highest standards in everything we do, from academics to character development.",
+                  },
+                  {
+                    title: "Innovation",
+                    description: "We embrace new teaching methods and technologies to enhance the learning experience.",
+                  },
+                  {
+                    title: "Integrity",
+                    description: "We build character and instill strong moral values in our students.",
+                  },
+                  {
+                    title: "Community",
+                    description: "We foster a supportive environment where everyone feels valued and included.",
+                  },
+                ].map((value, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <Star className="w-6 h-6 text-yellow-500" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                      <p className="text-gray-600">{value.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="animate-slide-up">
+              <Image
+                src="/placeholder.svg?height=500&width=600&text=Students+Learning"
+                alt="Students learning together"
+                width={600}
+                height={500}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Academics & Curriculum Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Academics & Curriculum</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our comprehensive curriculum is designed to challenge, inspire, and prepare students for success in higher
+              education and beyond.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div className="animate-slide-up">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Educational Approach</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Inquiry-Based Learning</h4>
+                    <p className="text-gray-600">
+                      Students develop critical thinking skills through hands-on exploration and research-driven
+                      projects that connect learning to real-world applications.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Users className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Collaborative Environment</h4>
+                    <p className="text-gray-600">
+                      Small class sizes foster meaningful discussions and peer-to-peer learning, building communication
+                      and teamwork skills.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <Award className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Personalized Learning</h4>
+                    <p className="text-gray-600">
+                      Individual learning plans ensure each student receives the support and challenges they need to
+                      reach their full potential.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="animate-slide-up">
+              <Image
+                src="/placeholder.svg?height=400&width=500&text=Students+in+Modern+Classroom"
+                alt="Students engaged in learning"
+                width={500}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+
+          {/* Academic Programs */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                title: "STEM Excellence",
+                icon: "🔬",
+                description:
+                  "Advanced Science, Technology, Engineering, and Mathematics programs with state-of-the-art laboratories.",
+                highlights: ["Robotics Club", "Science Olympiad", "Coding Bootcamps", "Engineering Design"],
+              },
+              {
+                title: "Liberal Arts",
+                icon: "📚",
+                description:
+                  "Comprehensive humanities program fostering critical thinking, creativity, and cultural awareness.",
+                highlights: ["Creative Writing", "Philosophy", "World Languages", "Art History"],
+              },
+              {
+                title: "Fine Arts",
+                icon: "🎨",
+                description:
+                  "Vibrant arts program including visual arts, music, theater, and digital media production.",
+                highlights: ["Orchestra & Band", "Drama Productions", "Digital Art Studio", "Photography"],
+              },
+              {
+                title: "Advanced Placement",
+                icon: "🎓",
+                description: "Extensive AP course offerings preparing students for college-level academic challenges.",
+                highlights: ["25+ AP Courses", "College Credit", "University Partnerships", "Academic Excellence"],
+              },
+              {
+                title: "Global Studies",
+                icon: "🌍",
+                description:
+                  "International perspective through language immersion, cultural exchange, and global citizenship programs.",
+                highlights: ["Study Abroad", "Model UN", "Cultural Exchange", "Language Immersion"],
+              },
+              {
+                title: "Life Skills",
+                icon: "💡",
+                description:
+                  "Practical skills for real-world success including financial literacy, leadership, and career preparation.",
+                highlights: ["Leadership Training", "Financial Literacy", "Career Counseling", "Internship Programs"],
+              },
+            ].map((program, index) => (
+              <Card
+                key={index}
+                className="hover:shadow-lg transition-shadow duration-300 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6 text-center ">
+                  <div className="text-4xl mb-4">{program.icon}</div>
+                  <h3 className="text-xl font-bold mb-3">{program.title}</h3>
+                  <p className="text-gray-600 mb-4">{program.description}</p>
+                  <div className="space-y-1">
+                    {program.highlights.map((highlight, idx) => (
+                      <Badge key={idx}  className="text-xs mr-1 mb-1">
+                        {highlight}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Academic Statistics */}
+          <div className="bg-white rounded-lg shadow-lg p-8 animate-slide-up">
+            <h3 className="text-2xl font-bold text-center mb-8">Academic Achievement</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { number: "98%", label: "University Acceptance" },
+                { number: "25+", label: "AP Courses Offered" },
+                { number: "15:1", label: "Student-Teacher Ratio" },
+                { number: "95%", label: "AP Pass Rate" },
+              ].map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
+          <h2 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
+          <p className="text-xl mb-8">
+            Take the first step towards an exceptional educational journey. Apply now and become part of the SchoolName
+            family.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+              <Link href="/admissions" className="flex items-center">
+                Start Application <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3 bg-transparent"
+            >
+              <Link href="/contact">Schedule Visit</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
