@@ -1,3 +1,20 @@
+import {
+  Trophy,
+  Medal,
+  Award,
+  Search,
+  TrendingUp,
+  Users,
+  BookOpen,
+  Target,
+  Star,
+  Calendar,
+  Download,
+  Phone,
+  Mail,
+  Clock,
+} from "lucide-react"
+
 export const heroImages = [
   "/placeholder.svg?height=600&width=1200&text=Students+in+Classroom",
   "/placeholder.svg?height=600&width=1200&text=School+Campus",
@@ -117,9 +134,9 @@ export  const navItems = [
     { href: "/about", label: "About Us" },
     { href: "/gallery", label: "Gallery" },
     { href: "/news", label: "News" },
-    { href: "/results", label: "Results" },
+    { href: "/result", label: "Results" },
     { href: "/sports", label: "Sports" },
-    { href: "/admissions", label: "Admissions" },
+    { href: "/admission", label: "Admissions" },
     { href: "/contact", label: "Contact" },
   ]
 
