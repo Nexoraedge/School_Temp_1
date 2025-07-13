@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, Award, Users, BookOpen, Trophy, Star, ArrowRight, Badge } from "lucide-react"
-import { heroImages } from "@/const"
+import { Features, heroImages, some, values } from "@/const"
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -27,9 +27,9 @@ export default function HomePage() {
   }
 
   return (
-    <div className="pt-16">
+    <div className="">
       {/* Hero Section with Image Slider */}
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="relative h-[100vh] overflow-hidden">
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
             <div
@@ -105,29 +105,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Award className="w-12 h-12 text-blue-600" />,
-                title: "Academic Excellence",
-                description:
-                  "Top-tier curriculum with experienced faculty ensuring the highest standards of education.",
-              },
-              {
-                icon: <Users className="w-12 h-12 text-green-600" />,
-                title: "Small Class Sizes",
-                description: "Personalized attention with optimal student-teacher ratios for better learning outcomes.",
-              },
-              {
-                icon: <BookOpen className="w-12 h-12 text-purple-600" />,
-                title: "Modern Facilities",
-                description: "State-of-the-art laboratories, library, and technology-enabled classrooms.",
-              },
-              {
-                icon: <Trophy className="w-12 h-12 text-orange-600" />,
-                title: "Sports & Activities",
-                description: "Comprehensive sports programs and extracurricular activities for all-round development.",
-              },
-            ].map((feature, index) => (
+            {Features.map((feature, index) => (
               <Card
                 key={index}
                 className="text-center hover:shadow-lg transition-shadow duration-300 animate-slide-up"
@@ -151,32 +129,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Core Values</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">Our Core Values</h2>
               <div className="space-y-6">
-                {[
-                  {
-                    title: "Excellence",
-                    description:
-                      "We strive for the highest standards in everything we do, from academics to character development.",
-                  },
-                  {
-                    title: "Innovation",
-                    description: "We embrace new teaching methods and technologies to enhance the learning experience.",
-                  },
-                  {
-                    title: "Integrity",
-                    description: "We build character and instill strong moral values in our students.",
-                  },
-                  {
-                    title: "Community",
-                    description: "We foster a supportive environment where everyone feels valued and included.",
-                  },
-                ].map((value, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
+                {values.map((value, index) => (
+                  <div key={index} className="flex items-start max-lg:text-center  max-lg:w-full space-x-4">
+                    <div className="flex-shrink-0 max-lg:absolute max-lg:hidden">
                       <Star className="w-6 h-6 text-yellow-500" />
                     </div>
-                    <div>
+                    <div className="w-full max-lg:text-center">
                       <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
                       <p className="text-gray-600">{value.description}</p>
                     </div>
@@ -184,9 +144,9 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="animate-slide-up">
+            <div className="animate-slide-up flex max-lg:w-full max-lg:justify-center">
               <Image
-                src="/placeholder.svg?height=500&width=600&text=Students+Learning"
+                src="/asset/image_discuss.png"
                 alt="Students learning together"
                 width={600}
                 height={500}
@@ -199,7 +159,7 @@ export default function HomePage() {
 
       {/* Academics & Curriculum Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Academics & Curriculum</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -208,10 +168,10 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="grid grid-cols-1 justify-center  lg:grid-cols-2 gap-12 mb-16">
             <div className="animate-slide-up">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Educational Approach</h3>
-              <div className="space-y-6">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6 max-lg:text-center">Our Educational Approach</h3>
+              <div className="space-y-6 max-lg:px-20 max-md:px-10 max-sm:px-1">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-6 h-6 text-blue-600" />
@@ -250,9 +210,9 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="animate-slide-up">
+            <div className="animate-slide-up flex max-lg:justify-center">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=Students+in+Modern+Classroom"
+                src="/asset/image_5.png"
                 alt="Students engaged in learning"
                 width={500}
                 height={400}
@@ -263,63 +223,24 @@ export default function HomePage() {
 
           {/* Academic Programs */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                title: "STEM Excellence",
-                icon: "🔬",
-                description:
-                  "Advanced Science, Technology, Engineering, and Mathematics programs with state-of-the-art laboratories.",
-                highlights: ["Robotics Club", "Science Olympiad", "Coding Bootcamps", "Engineering Design"],
-              },
-              {
-                title: "Liberal Arts",
-                icon: "📚",
-                description:
-                  "Comprehensive humanities program fostering critical thinking, creativity, and cultural awareness.",
-                highlights: ["Creative Writing", "Philosophy", "World Languages", "Art History"],
-              },
-              {
-                title: "Fine Arts",
-                icon: "🎨",
-                description:
-                  "Vibrant arts program including visual arts, music, theater, and digital media production.",
-                highlights: ["Orchestra & Band", "Drama Productions", "Digital Art Studio", "Photography"],
-              },
-              {
-                title: "Advanced Placement",
-                icon: "🎓",
-                description: "Extensive AP course offerings preparing students for college-level academic challenges.",
-                highlights: ["25+ AP Courses", "College Credit", "University Partnerships", "Academic Excellence"],
-              },
-              {
-                title: "Global Studies",
-                icon: "🌍",
-                description:
-                  "International perspective through language immersion, cultural exchange, and global citizenship programs.",
-                highlights: ["Study Abroad", "Model UN", "Cultural Exchange", "Language Immersion"],
-              },
-              {
-                title: "Life Skills",
-                icon: "💡",
-                description:
-                  "Practical skills for real-world success including financial literacy, leadership, and career preparation.",
-                highlights: ["Leadership Training", "Financial Literacy", "Career Counseling", "Internship Programs"],
-              },
-            ].map((program, index) => (
+            {some.map(({title, icon, description, highlights}, index) => (
               <Card
                 key={index}
                 className="hover:shadow-lg transition-shadow duration-300 animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6 text-center ">
-                  <div className="text-4xl mb-4">{program.icon}</div>
-                  <h3 className="text-xl font-bold mb-3">{program.title}</h3>
-                  <p className="text-gray-600 mb-4">{program.description}</p>
+                  <div className="text-4xl mb-4">{icon}</div>
+                  <h3 className="text-xl font-bold mb-3">{title}</h3>
+                  <p className="text-gray-600 mb-4">{description}</p>
                   <div className="space-y-1">
-                    {program.highlights.map((highlight, idx) => (
-                      <Badge key={idx}  className="text-xs mr-1 mb-1">
-                        {highlight}
-                      </Badge>
+                    {highlights.map((e, idx) => (
+                      <div className="text-xs mr-1 mb-1 flex sm:gap-5 max-sm:justify-between "  key={idx}>
+                      <Badge className=" fill-yellow-500 text-orange-200" />
+                        
+                      <span className="text-base" >{e}</span>  
+                      
+                      </div>
                     ))}
                   </div>
                 </CardContent>

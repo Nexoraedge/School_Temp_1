@@ -16,11 +16,96 @@ import {
 } from "lucide-react"
 
 export const heroImages = [
-  "/placeholder.svg?height=600&width=1200&text=Students+in+Classroom",
-  "/placeholder.svg?height=600&width=1200&text=School+Campus",
-  "/placeholder.svg?height=600&width=1200&text=Sports+Activities",
-  "/placeholder.svg?height=600&width=1200&text=Science+Laboratory",
+  "/asset/image_1.png",
+  "/asset/image_2.png",
+  "/asset/image_3.png",
+  "/asset/image_4.png",
 ]
+export const Features =[
+              {
+                icon: <Award className="w-12 h-12 text-blue-600" />,
+                title: "Academic Excellence",
+                description:
+                  "Top-tier curriculum with experienced faculty ensuring the highest standards of education.",
+              },
+              {
+                icon: <Users className="w-12 h-12 text-green-600" />,
+                title: "Small Class Sizes",
+                description: "Personalized attention with optimal student-teacher ratios for better learning outcomes.",
+              },
+              {
+                icon: <BookOpen className="w-12 h-12 text-purple-600" />,
+                title: "Modern Facilities",
+                description: "State-of-the-art laboratories, library, and technology-enabled classrooms.",
+              },
+              {
+                icon: <Trophy className="w-12 h-12 text-orange-600" />,
+                title: "Sports & Activities",
+                description: "Comprehensive sports programs and extracurricular activities for all-round development.",
+              },
+            ]
+export const some = [
+              {
+                title: "STEM Excellence",
+                icon: "🔬",
+                description:
+                  "Advanced Science, Technology, Engineering, and Mathematics programs with state-of-the-art laboratories.",
+                highlights: ["Robotics Club", "Science Olympiad", "Coding Bootcamps", "Engineering Design"],
+              },
+              {
+                title: "Liberal Arts",
+                icon: "📚",
+                description:
+                  "Comprehensive humanities program fostering critical thinking, creativity, and cultural awareness.",
+                highlights: ["Creative Writing", "Philosophy", "World Languages", "Art History"],
+              },
+              {
+                title: "Fine Arts",
+                icon: "🎨",
+                description:
+                  "Vibrant arts program including visual arts, music, theater, and digital media production.",
+                highlights: ["Orchestra & Band", "Drama Productions", "Digital Art Studio", "Photography"],
+              },
+              {
+                title: "Advanced Placement",
+                icon: "🎓",
+                description: "Extensive AP course offerings preparing students for college-level academic challenges.",
+                highlights: ["25+ AP Courses", "College Credit", "University Partnerships", "Academic Excellence"],
+              },
+              {
+                title: "Global Studies",
+                icon: "🌍",
+                description:
+                  "International perspective through language immersion, cultural exchange, and global citizenship programs.",
+                highlights: ["Study Abroad", "Model UN", "Cultural Exchange", "Language Immersion"],
+              },
+              {
+                title: "Life Skills",
+                icon: "💡",
+                description:
+                  "Practical skills for real-world success including financial literacy, leadership, and career preparation.",
+                highlights: ["Leadership Training", "Financial Literacy", "Career Counseling", "Internship Programs"],
+              },
+            ]
+export const values = [
+                  {
+                    title: "Excellence",
+                    description:
+                      "We strive for the highest standards in everything we do, from academics to character development.",
+                  },
+                  {
+                    title: "Innovation",
+                    description: "We embrace new teaching methods and technologies to enhance the learning experience.",
+                  },
+                  {
+                    title: "Integrity",
+                    description: "We build character and instill strong moral values in our students.",
+                  },
+                  {
+                    title: "Community",
+                    description: "We foster a supportive environment where everyone feels valued and included.",
+                  },
+                ]
  export const admissionProcess = [
    {
      step: 1,
