@@ -28,7 +28,7 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-200 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-gray-900 hover:text-blue-600 transition-colors duration-200 font-medium"
               >
                 {item.label}
               </Link>
@@ -51,7 +51,7 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-200 hover:text-blue-600 transition-colors duration-200"
+                  className="block px-3 py-2 text-gray-900 hover:text-blue-600 transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

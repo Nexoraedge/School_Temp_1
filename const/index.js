@@ -21,320 +21,372 @@ export const heroImages = [
   "/asset/image_3.png",
   "/asset/image_4.png",
 ]
-export const Features =[
-              {
-                icon: <Award className="w-12 h-12 text-blue-600" />,
-                title: "Academic Excellence",
-                description:
-                  "Top-tier curriculum with experienced faculty ensuring the highest standards of education.",
-              },
-              {
-                icon: <Users className="w-12 h-12 text-green-600" />,
-                title: "Small Class Sizes",
-                description: "Personalized attention with optimal student-teacher ratios for better learning outcomes.",
-              },
-              {
-                icon: <BookOpen className="w-12 h-12 text-purple-600" />,
-                title: "Modern Facilities",
-                description: "State-of-the-art laboratories, library, and technology-enabled classrooms.",
-              },
-              {
-                icon: <Trophy className="w-12 h-12 text-orange-600" />,
-                title: "Sports & Activities",
-                description: "Comprehensive sports programs and extracurricular activities for all-round development.",
-              },
-            ]
+export const Our_Leadership=[
+  { number: "30+", label: "Years of Excellence" },
+  { number: "1200+", label: "Current Students" },
+  { number: "95%", label: "University Acceptance Rate" },
+  { number: "50+", label: "National Awards" },
+]
+export const Our_School = [
+  
+    "Founded in 1990 by visionary educators Dr. Sarah Johnson and Prof. Michael Chen, SchoolName began as a small institution with a big dream: to create an educational environment where every student could thrive and reach their full potential.",
+
+    "What started with just 50 students has now grown into a prestigious institution serving over 1,200 students from kindergarten through grade 12. Our journey has been marked by continuous innovation, academic excellence, and an unwavering commitment to holistic education.",
+    
+    "Today, SchoolName stands as a beacon of educational excellence, recognized nationally for our innovative teaching methods, outstanding academic results, and the remarkable achievements of our alumni who have gone on to make significant contributions in various fields worldwide." 
+]
+export const Teachers = [
+  {
+    name: "Dr. Rahul",
+    position: "Founder & Principal",
+    image: "/asset/sir_4.png",
+    bio: "With over 30 years in education, Dr. Rahul leads our institution with vision and dedication to academic excellence.",
+  },
+  {
+    name: "Prof. Ajay",
+    position: "Co-Founder & Academic Director",
+    image: "/asset/sir_1.png",
+    bio: "Prof. Ajay brings innovative teaching methodologies and ensures our curriculum meets global standards.",
+  },
+  {
+    name: "Ms. Priya",
+    position: "Vice Principal",
+    image: "/asset/mam_1.png",
+    bio: "Ms. Priya oversees student affairs and maintains our supportive learning environment.",
+  },
+  {
+    name: "Dr. Anupam",
+    position: "Head of Sciences",
+    image: "/asset/sir_4.png",
+    bio: "Dr. Anupam leads our science department with cutting-edge research and hands-on learning approaches.",
+  },
+  {
+    name: "Ms. Suma",
+    position: "Head of Arts & Humanities",
+    image: "/asset/mam_1.png",
+    bio: "Ms. Suma nurtures creativity and critical thinking through our comprehensive arts program.",
+  },
+  {
+    name: "Mr. Vihan",
+    position: "Sports Director",
+    image: "/asset/sir_4.png",
+    bio: "Mr. Vihan develops our championship sports programs and promotes physical wellness for all students.",
+  },
+]
+export const Features = [
+  {
+    icon: <Award className="w-12 h-12 text-blue-600" />,
+    title: "Academic Excellence",
+    description:
+      "Top-tier curriculum with experienced faculty ensuring the highest standards of education.",
+  },
+  {
+    icon: <Users className="w-12 h-12 text-green-600" />,
+    title: "Small Class Sizes",
+    description: "Personalized attention with optimal student-teacher ratios for better learning outcomes.",
+  },
+  {
+    icon: <BookOpen className="w-12 h-12 text-purple-600" />,
+    title: "Modern Facilities",
+    description: "State-of-the-art laboratories, library, and technology-enabled classrooms.",
+  },
+  {
+    icon: <Trophy className="w-12 h-12 text-orange-600" />,
+    title: "Sports & Activities",
+    description: "Comprehensive sports programs and extracurricular activities for all-round development.",
+  },
+]
 export const some = [
-              {
-                title: "STEM Excellence",
-                icon: "🔬",
-                description:
-                  "Advanced Science, Technology, Engineering, and Mathematics programs with state-of-the-art laboratories.",
-                highlights: ["Robotics Club", "Science Olympiad", "Coding Bootcamps", "Engineering Design"],
-              },
-              {
-                title: "Liberal Arts",
-                icon: "📚",
-                description:
-                  "Comprehensive humanities program fostering critical thinking, creativity, and cultural awareness.",
-                highlights: ["Creative Writing", "Philosophy", "World Languages", "Art History"],
-              },
-              {
-                title: "Fine Arts",
-                icon: "🎨",
-                description:
-                  "Vibrant arts program including visual arts, music, theater, and digital media production.",
-                highlights: ["Orchestra & Band", "Drama Productions", "Digital Art Studio", "Photography"],
-              },
-              {
-                title: "Advanced Placement",
-                icon: "🎓",
-                description: "Extensive AP course offerings preparing students for college-level academic challenges.",
-                highlights: ["25+ AP Courses", "College Credit", "University Partnerships", "Academic Excellence"],
-              },
-              {
-                title: "Global Studies",
-                icon: "🌍",
-                description:
-                  "International perspective through language immersion, cultural exchange, and global citizenship programs.",
-                highlights: ["Study Abroad", "Model UN", "Cultural Exchange", "Language Immersion"],
-              },
-              {
-                title: "Life Skills",
-                icon: "💡",
-                description:
-                  "Practical skills for real-world success including financial literacy, leadership, and career preparation.",
-                highlights: ["Leadership Training", "Financial Literacy", "Career Counseling", "Internship Programs"],
-              },
-            ]
+  {
+    title: "STEM Excellence",
+    icon: "🔬",
+    description:
+      "Advanced Science, Technology, Engineering, and Mathematics programs with state-of-the-art laboratories.",
+    highlights: ["Robotics Club", "Science Olympiad", "Coding Bootcamps", "Engineering Design"],
+  },
+  {
+    title: "Liberal Arts",
+    icon: "📚",
+    description:
+      "Comprehensive humanities program fostering critical thinking, creativity, and cultural awareness.",
+    highlights: ["Creative Writing", "Philosophy", "World Languages", "Art History"],
+  },
+  {
+    title: "Fine Arts",
+    icon: "🎨",
+    description:
+      "Vibrant arts program including visual arts, music, theater, and digital media production.",
+    highlights: ["Orchestra & Band", "Drama Productions", "Digital Art Studio", "Photography"],
+  },
+  {
+    title: "Advanced Placement",
+    icon: "🎓",
+    description: "Extensive AP course offerings preparing students for college-level academic challenges.",
+    highlights: ["25+ AP Courses", "College Credit", "University Partnerships", "Academic Excellence"],
+  },
+  {
+    title: "Global Studies",
+    icon: "🌍",
+    description:
+      "International perspective through language immersion, cultural exchange, and global citizenship programs.",
+    highlights: ["Study Abroad", "Model UN", "Cultural Exchange", "Language Immersion"],
+  },
+  {
+    title: "Life Skills",
+    icon: "💡",
+    description:
+      "Practical skills for real-world success including financial literacy, leadership, and career preparation.",
+    highlights: ["Leadership Training", "Financial Literacy", "Career Counseling", "Internship Programs"],
+  },
+]
 export const values = [
-                  {
-                    title: "Excellence",
-                    description:
-                      "We strive for the highest standards in everything we do, from academics to character development.",
-                  },
-                  {
-                    title: "Innovation",
-                    description: "We embrace new teaching methods and technologies to enhance the learning experience.",
-                  },
-                  {
-                    title: "Integrity",
-                    description: "We build character and instill strong moral values in our students.",
-                  },
-                  {
-                    title: "Community",
-                    description: "We foster a supportive environment where everyone feels valued and included.",
-                  },
-                ]
- export const admissionProcess = [
-   {
-     step: 1,
-     title: "Application Submission",
-     description: "Complete and submit the online application form with required documents.",
-     deadline: "March 31, 2024",
-     status: "Open",
-   },
-   {
-     step: 2,
-     title: "Entrance Examination",
-     description: "Appear for the entrance examination covering core subjects.",
-     deadline: "April 15, 2024",
-     status: "Upcoming",
-   },
-   {
-     step: 3,
-     title: "Interview Process",
-     description: "Personal interview with student and parents/guardians.",
-     deadline: "April 30, 2024",
-     status: "Upcoming",
-   },
-   {
-     step: 4,
-     title: "Result Declaration",
-     description: "Admission results will be announced and communicated.",
-     deadline: "May 15, 2024",
-     status: "Pending",
-   },
-   {
-     step: 5,
-     title: "Fee Payment & Enrollment",
-     description: "Complete fee payment and enrollment formalities.",
-     deadline: "May 31, 2024",
-     status: "Pending",
-   },
- ]
- 
- export const eligibilityCriteria = [
-   {
-     grade: "Kindergarten",
-     ageRequirement: "3-4 years",
-     documents: ["Birth Certificate", "Medical Certificate", "Passport Photos"],
-     additionalInfo: "Basic interaction and communication skills assessment",
-   },
-   {
-     grade: "Grade 1-5",
-     ageRequirement: "5-10 years",
-     documents: ["Previous School Records", "Birth Certificate", "Medical Certificate", "Transfer Certificate"],
-     additionalInfo: "Age-appropriate assessment in basic subjects",
-   },
-   {
-     grade: "Grade 6-8",
-     ageRequirement: "11-13 years",
-     documents: ["Previous School Records", "Birth Certificate", "Medical Certificate", "Transfer Certificate"],
-     additionalInfo: "Entrance test in Math, Science, and English",
-   },
-   {
-     grade: "Grade 9-10",
-     ageRequirement: "14-15 years",
-     documents: ["Previous School Records", "Birth Certificate", "Medical Certificate", "Transfer Certificate"],
-     additionalInfo: "Comprehensive entrance examination and interview",
-   },
-   {
-     grade: "Grade 11-12",
-     ageRequirement: "16-17 years",
-     documents: ["Grade 10 Certificate", "Birth Certificate", "Medical Certificate", "Transfer Certificate"],
-     additionalInfo: "Subject-specific entrance test and counseling session",
-   },
- ]
- 
-export  const feeStructure = [
-   {
-     grade: "Kindergarten",
-     admissionFee: "$500",
-     annualTuition: "$8,000",
-     facilities: "$1,200",
-     total: "$9,700",
-   },
-   {
-     grade: "Grade 1-5",
-     admissionFee: "$750",
-     annualTuition: "$10,000",
-     facilities: "$1,500",
-     total: "$12,250",
-   },
-   {
-     grade: "Grade 6-8",
-     admissionFee: "$1,000",
-     annualTuition: "$12,000",
-     facilities: "$1,800",
-     total: "$14,800",
-   },
-   {
-     grade: "Grade 9-10",
-     admissionFee: "$1,250",
-     annualTuition: "$14,000",
-     facilities: "$2,000",
-     total: "$17,250",
-   },
-   {
-     grade: "Grade 11-12",
-     admissionFee: "$1,500",
-     annualTuition: "$16,000",
-     facilities: "$2,200",
-     total: "$19,700",
-   },
- ]
-export  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/news", label: "News" },
-    { href: "/result", label: "Results" },
-    { href: "/sports", label: "Sports" },
-    { href: "/admission", label: "Admissions" },
-    { href: "/contact", label: "Contact" },
-  ]
+  {
+    title: "Excellence",
+    description:
+      "We strive for the highest standards in everything we do, from academics to character development.",
+  },
+  {
+    title: "Innovation",
+    description: "We embrace new teaching methods and technologies to enhance the learning experience.",
+  },
+  {
+    title: "Integrity",
+    description: "We build character and instill strong moral values in our students.",
+  },
+  {
+    title: "Community",
+    description: "We foster a supportive environment where everyone feels valued and included.",
+  },
+]
+export const admissionProcess = [
+  {
+    step: 1,
+    title: "Application Submission",
+    description: "Complete and submit the online application form with required documents.",
+    deadline: "March 31, 2024",
+    status: "Open",
+  },
+  {
+    step: 2,
+    title: "Entrance Examination",
+    description: "Appear for the entrance examination covering core subjects.",
+    deadline: "April 15, 2024",
+    status: "Upcoming",
+  },
+  {
+    step: 3,
+    title: "Interview Process",
+    description: "Personal interview with student and parents/guardians.",
+    deadline: "April 30, 2024",
+    status: "Upcoming",
+  },
+  {
+    step: 4,
+    title: "Result Declaration",
+    description: "Admission results will be announced and communicated.",
+    deadline: "May 15, 2024",
+    status: "Pending",
+  },
+  {
+    step: 5,
+    title: "Fee Payment & Enrollment",
+    description: "Complete fee payment and enrollment formalities.",
+    deadline: "May 31, 2024",
+    status: "Pending",
+  },
+]
 
-  export  const testimonials = [
-    {
-      name: "Sarah Mitchell",
-      role: "Parent",
-      message:
-        "SchoolName has exceeded our expectations. The teachers are dedicated and the facilities are outstanding.",
-      rating: 5,
-    },
-    {
-      name: "David Chen",
-      role: "Alumni",
-      message: "The education I received here prepared me perfectly for university and my career in engineering.",
-      rating: 5,
-    },
-    {
-      name: "Maria Rodriguez",
-      role: "Current Parent",
-      message: "My daughter loves coming to school every day. The community here is truly special.",
-      rating: 5,
-    },
-  ]
+export const eligibilityCriteria = [
+  {
+    grade: "Kindergarten",
+    ageRequirement: "3-4 years",
+    documents: ["Birth Certificate", "Medical Certificate", "Passport Photos"],
+    additionalInfo: "Basic interaction and communication skills assessment",
+  },
+  {
+    grade: "Grade 1-5",
+    ageRequirement: "5-10 years",
+    documents: ["Previous School Records", "Birth Certificate", "Medical Certificate", "Transfer Certificate"],
+    additionalInfo: "Age-appropriate assessment in basic subjects",
+  },
+  {
+    grade: "Grade 6-8",
+    ageRequirement: "11-13 years",
+    documents: ["Previous School Records", "Birth Certificate", "Medical Certificate", "Transfer Certificate"],
+    additionalInfo: "Entrance test in Math, Science, and English",
+  },
+  {
+    grade: "Grade 9-10",
+    ageRequirement: "14-15 years",
+    documents: ["Previous School Records", "Birth Certificate", "Medical Certificate", "Transfer Certificate"],
+    additionalInfo: "Comprehensive entrance examination and interview",
+  },
+  {
+    grade: "Grade 11-12",
+    ageRequirement: "16-17 years",
+    documents: ["Grade 10 Certificate", "Birth Certificate", "Medical Certificate", "Transfer Certificate"],
+    additionalInfo: "Subject-specific entrance test and counseling session",
+  },
+]
 
-  export const galleryImages = [
-    {
-      id: 1,
-      src: "/placeholder.svg?height=400&width=600&text=Students+in+Library",
-      alt: "Students studying in library",
-      category: "Campus Life",
-      title: "Modern Library Facilities",
-    },
-    {
-      id: 2,
-      src: "/placeholder.svg?height=400&width=600&text=Basketball+Team",
-      alt: "Basketball team in action",
-      category: "Sports",
-      title: "Championship Basketball Team",
-    },
-    {
-      id: 3,
-      src: "/placeholder.svg?height=400&width=600&text=Science+Fair",
-      alt: "Annual science fair",
-      category: "Events",
-      title: "Annual Science Fair",
-    },
-    {
-      id: 4,
-      src: "/placeholder.svg?height=400&width=600&text=Chemistry+Lab",
-      alt: "Chemistry laboratory",
-      category: "Academics",
-      title: "State-of-the-art Chemistry Lab",
-    },
-    {
-      id: 5,
-      src: "/placeholder.svg?height=400&width=600&text=School+Building",
-      alt: "Main school building",
-      category: "Infrastructure",
-      title: "Main Academic Building",
-    },
-    {
-      id: 6,
-      src: "/placeholder.svg?height=400&width=600&text=Art+Class",
-      alt: "Students in art class",
-      category: "Campus Life",
-      title: "Creative Arts Program",
-    },
-    {
-      id: 7,
-      src: "/placeholder.svg?height=400&width=600&text=Swimming+Pool",
-      alt: "Swimming competition",
-      category: "Sports",
-      title: "Olympic-size Swimming Pool",
-    },
-    {
-      id: 8,
-      src: "/placeholder.svg?height=400&width=600&text=Graduation+Ceremony",
-      alt: "Graduation ceremony",
-      category: "Events",
-      title: "Graduation Ceremony 2024",
-    },
-    {
-      id: 9,
-      src: "/placeholder.svg?height=400&width=600&text=Computer+Lab",
-      alt: "Computer laboratory",
-      category: "Academics",
-      title: "Advanced Computer Laboratory",
-    },
-    {
-      id: 10,
-      src: "/placeholder.svg?height=400&width=600&text=Auditorium",
-      alt: "School auditorium",
-      category: "Infrastructure",
-      title: "Grand Auditorium",
-    },
-    {
-      id: 11,
-      src: "/placeholder.svg?height=400&width=600&text=Music+Class",
-      alt: "Music class session",
-      category: "Campus Life",
-      title: "Music and Performing Arts",
-    },
-    {
-      id: 12,
-      src: "/placeholder.svg?height=400&width=600&text=Football+Field",
-      alt: "Football field",
-      category: "Sports",
-      title: "Professional Football Field",
-    },
-  ]
+export const feeStructure = [
+  {
+    grade: "Kindergarten",
+    admissionFee: "$500",
+    annualTuition: "$8,000",
+    facilities: "$1,200",
+    total: "$9,700",
+  },
+  {
+    grade: "Grade 1-5",
+    admissionFee: "$750",
+    annualTuition: "$10,000",
+    facilities: "$1,500",
+    total: "$12,250",
+  },
+  {
+    grade: "Grade 6-8",
+    admissionFee: "$1,000",
+    annualTuition: "$12,000",
+    facilities: "$1,800",
+    total: "$14,800",
+  },
+  {
+    grade: "Grade 9-10",
+    admissionFee: "$1,250",
+    annualTuition: "$14,000",
+    facilities: "$2,000",
+    total: "$17,250",
+  },
+  {
+    grade: "Grade 11-12",
+    admissionFee: "$1,500",
+    annualTuition: "$16,000",
+    facilities: "$2,200",
+    total: "$19,700",
+  },
+]
+export const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/news", label: "News" },
+  { href: "/result", label: "Results" },
+  { href: "/sports", label: "Sports" },
+  { href: "/admission", label: "Admissions" },
+  { href: "/contact", label: "Contact" },
+]
 
- export const galleryCategories = ["All", "Campus Life", "Sports", "Events", "Academics", "Infrastructure"]
+export const testimonials = [
+  {
+    name: "Sarah Mitchell",
+    role: "Parent",
+    message:
+      "SchoolName has exceeded our expectations. The teachers are dedicated and the facilities are outstanding.",
+    rating: 5,
+  },
+  {
+    name: "David Chen",
+    role: "Alumni",
+    message: "The education I received here prepared me perfectly for university and my career in engineering.",
+    rating: 5,
+  },
+  {
+    name: "Maria Rodriguez",
+    role: "Current Parent",
+    message: "My daughter loves coming to school every day. The community here is truly special.",
+    rating: 5,
+  },
+]
+
+export const galleryImages = [
+  {
+    id: 1,
+    src: "/placeholder.svg?height=400&width=600&text=Students+in+Library",
+    alt: "Students studying in library",
+    category: "Campus Life",
+    title: "Modern Library Facilities",
+  },
+  {
+    id: 2,
+    src: "/placeholder.svg?height=400&width=600&text=Basketball+Team",
+    alt: "Basketball team in action",
+    category: "Sports",
+    title: "Championship Basketball Team",
+  },
+  {
+    id: 3,
+    src: "/placeholder.svg?height=400&width=600&text=Science+Fair",
+    alt: "Annual science fair",
+    category: "Events",
+    title: "Annual Science Fair",
+  },
+  {
+    id: 4,
+    src: "/placeholder.svg?height=400&width=600&text=Chemistry+Lab",
+    alt: "Chemistry laboratory",
+    category: "Academics",
+    title: "State-of-the-art Chemistry Lab",
+  },
+  {
+    id: 5,
+    src: "/placeholder.svg?height=400&width=600&text=School+Building",
+    alt: "Main school building",
+    category: "Infrastructure",
+    title: "Main Academic Building",
+  },
+  {
+    id: 6,
+    src: "/placeholder.svg?height=400&width=600&text=Art+Class",
+    alt: "Students in art class",
+    category: "Campus Life",
+    title: "Creative Arts Program",
+  },
+  {
+    id: 7,
+    src: "/placeholder.svg?height=400&width=600&text=Swimming+Pool",
+    alt: "Swimming competition",
+    category: "Sports",
+    title: "Olympic-size Swimming Pool",
+  },
+  {
+    id: 8,
+    src: "/placeholder.svg?height=400&width=600&text=Graduation+Ceremony",
+    alt: "Graduation ceremony",
+    category: "Events",
+    title: "Graduation Ceremony 2024",
+  },
+  {
+    id: 9,
+    src: "/placeholder.svg?height=400&width=600&text=Computer+Lab",
+    alt: "Computer laboratory",
+    category: "Academics",
+    title: "Advanced Computer Laboratory",
+  },
+  {
+    id: 10,
+    src: "/placeholder.svg?height=400&width=600&text=Auditorium",
+    alt: "School auditorium",
+    category: "Infrastructure",
+    title: "Grand Auditorium",
+  },
+  {
+    id: 11,
+    src: "/placeholder.svg?height=400&width=600&text=Music+Class",
+    alt: "Music class session",
+    category: "Campus Life",
+    title: "Music and Performing Arts",
+  },
+  {
+    id: 12,
+    src: "/placeholder.svg?height=400&width=600&text=Football+Field",
+    alt: "Football field",
+    category: "Sports",
+    title: "Professional Football Field",
+  },
+]
+
+export const galleryCategories = ["All", "Campus Life", "Sports", "Events", "Academics", "Infrastructure"]
 
 export const newsArticles = [
   {

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Target, Eye, Heart } from "lucide-react"
+import { Teachers , Our_School, Our_Leadership } from "@/const"
 
 export default function AboutPage() {
   return (
@@ -23,28 +24,16 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <h2 className="text-4xl font-bold max-lg:text-center text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-600">
-                <p>
-                  Founded in 1990 by visionary educators Dr. Sarah Johnson and Prof. Michael Chen, SchoolName began as a
-                  small institution with a big dream: to create an educational environment where every student could
-                  thrive and reach their full potential.
-                </p>
-                <p>
-                  What started with just 50 students has now grown into a prestigious institution serving over 1,200
-                  students from kindergarten through grade 12. Our journey has been marked by continuous innovation,
-                  academic excellence, and an unwavering commitment to holistic education.
-                </p>
-                <p>
-                  Today, SchoolName stands as a beacon of educational excellence, recognized nationally for our
-                  innovative teaching methods, outstanding academic results, and the remarkable achievements of our
-                  alumni who have gone on to make significant contributions in various fields worldwide.
-                </p>
+                {Our_School.map((item, index) => (
+                  <p key={index}>{item}</p>
+                ))}
               </div>
             </div>
-            <div className="animate-slide-up">
+            <div className="animate-slide-up max-lg:w-full max-lg:flex max-lg:justify-center">
               <Image
-                src="/placeholder.svg?height=500&width=600&text=School+History"
+                src="/asset/image_6.png"
                 alt="School history"
                 width={600}
                 height={500}
@@ -118,44 +107,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Dr. Sarah Johnson",
-                position: "Founder & Principal",
-                image: "/placeholder.svg?height=300&width=300&text=Dr.+Sarah+Johnson",
-                bio: "With over 30 years in education, Dr. Johnson leads our institution with vision and dedication to academic excellence.",
-              },
-              {
-                name: "Prof. Michael Chen",
-                position: "Co-Founder & Academic Director",
-                image: "/placeholder.svg?height=300&width=300&text=Prof.+Michael+Chen",
-                bio: "Prof. Chen brings innovative teaching methodologies and ensures our curriculum meets global standards.",
-              },
-              {
-                name: "Ms. Emily Rodriguez",
-                position: "Vice Principal",
-                image: "/placeholder.svg?height=300&width=300&text=Ms.+Emily+Rodriguez",
-                bio: "Ms. Rodriguez oversees student affairs and maintains our supportive learning environment.",
-              },
-              {
-                name: "Dr. James Wilson",
-                position: "Head of Sciences",
-                image: "/placeholder.svg?height=300&width=300&text=Dr.+James+Wilson",
-                bio: "Dr. Wilson leads our science department with cutting-edge research and hands-on learning approaches.",
-              },
-              {
-                name: "Ms. Lisa Thompson",
-                position: "Head of Arts & Humanities",
-                image: "/placeholder.svg?height=300&width=300&text=Ms.+Lisa+Thompson",
-                bio: "Ms. Thompson nurtures creativity and critical thinking through our comprehensive arts program.",
-              },
-              {
-                name: "Mr. David Kumar",
-                position: "Sports Director",
-                image: "/placeholder.svg?height=300&width=300&text=Mr.+David+Kumar",
-                bio: "Mr. Kumar develops our championship sports programs and promotes physical wellness for all students.",
-              },
-            ].map((member, index) => (
+            {Teachers.map((member, index) => (
               <Card
                 key={index}
                 className="hover:shadow-lg transition-shadow duration-300 animate-slide-up"
@@ -188,12 +140,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: "30+", label: "Years of Excellence" },
-              { number: "1200+", label: "Current Students" },
-              { number: "95%", label: "University Acceptance Rate" },
-              { number: "50+", label: "National Awards" },
-            ].map((stat, index) => (
+            {Our_Leadership.map((stat, index) => (
               <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="text-4xl font-bold mb-2">{stat.number}</div>
                 <div className="text-lg">{stat.label}</div>
