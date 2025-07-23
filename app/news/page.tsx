@@ -39,7 +39,7 @@ export default function NewsPage() {
                       alt={featuredArticle.title}
                       width={800}
                       height={400}
-                      className="w-full h-64 object-cover"
+                      className="w-full h-64 object-contain rounded"
                     />
                     <Badge className="absolute top-4 left-4 bg-red-600">Featured</Badge>
                   </div>
@@ -69,7 +69,7 @@ export default function NewsPage() {
             )}
 
             {/* Regular Articles */}
-            <div className="space-y-6">
+            <div className="space-y-6 h-[calc(100vh-15rem)] overflow-y-auto px-1 py-2 border-[1px] border-gray-400 shadow-sm  shadow-gray-400 rounded">
               {regularArticles.map((article, index) => (
                 <Card
                   key={article.id}
@@ -171,7 +171,7 @@ export default function NewsPage() {
                     placeholder="Enter your email"
                     className="w-full px-3 py-2 rounded text-gray-900"
                   />
-                  <button className="w-full bg-white text-blue-600 py-2 rounded font-semibold hover:bg-gray-100 transition-colors">
+                  <button className="w-full bg-white cursor-pointer text-blue-600 py-2 rounded font-semibold hover:bg-gray-100 transition-colors">
                     Subscribe
                   </button>
                 </div>

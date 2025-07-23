@@ -394,7 +394,7 @@ export const newsArticles = [
     title: "SchoolName Students Win National Science Competition",
     excerpt:
       "Our brilliant students secured first place in the National Science Olympiad, showcasing exceptional talent in physics and chemistry.",
-    image: "/placeholder.svg?height=300&width=500&text=Science+Competition+Winners",
+    image: "/asset/science.png",
     date: "2024-01-15",
     author: "Dr. James Wilson",
     category: "Achievement",
@@ -405,7 +405,7 @@ export const newsArticles = [
     title: "New State-of-the-Art STEM Laboratory Inaugurated",
     excerpt:
       "We are proud to announce the opening of our new STEM laboratory equipped with cutting-edge technology and research facilities.",
-    image: "/placeholder.svg?height=300&width=500&text=New+STEM+Lab",
+    image: "/asset/science.png",
     date: "2024-01-10",
     author: "Principal Sarah Johnson",
     category: "Infrastructure",
@@ -415,17 +415,17 @@ export const newsArticles = [
     title: "Annual Sports Day 2024 - A Grand Success",
     excerpt:
       "Our annual sports day witnessed incredible performances from students across all grades, promoting fitness and team spirit.",
-    image: "/placeholder.svg?height=300&width=500&text=Sports+Day+2024",
+    image: "/asset/swim.png",
     date: "2024-01-08",
     author: "Mr. David Kumar",
     category: "Events",
   },
   {
     id: 4,
-    title: "International Exchange Program with European Schools",
+    title: "International Exchange Program with Western Schools",
     excerpt:
       "SchoolName partners with leading European institutions to provide students with global exposure and cultural exchange opportunities.",
-    image: "/placeholder.svg?height=300&width=500&text=Exchange+Program",
+    image: "/asset/image_5.png",
     date: "2024-01-05",
     author: "Ms. Emily Rodriguez",
     category: "Programs",
@@ -435,7 +435,7 @@ export const newsArticles = [
     title: "Outstanding Results in Board Examinations 2023",
     excerpt:
       "Our students achieved remarkable success with 98% pass rate and multiple students scoring above 95% in their board examinations.",
-    image: "/placeholder.svg?height=300&width=500&text=Board+Results+2023",
+    image: "/asset/image_6.png",
     date: "2024-01-03",
     author: "Academic Department",
     category: "Achievement",
@@ -445,7 +445,7 @@ export const newsArticles = [
     title: "Green Initiative: Solar Panel Installation Complete",
     excerpt:
       "SchoolName takes a major step towards sustainability with the installation of solar panels, reducing our carbon footprint significantly.",
-    image: "/placeholder.svg?height=300&width=500&text=Solar+Panels",
+    image: "/asset/image_2.png",
     date: "2024-01-01",
     author: "Facilities Team",
     category: "Environment",
